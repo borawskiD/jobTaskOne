@@ -1,5 +1,6 @@
-package com.borawski.jobtaskone;
+package com.borawski.jobtaskone.api;
 
+import com.borawski.jobtaskone.transfers.TransferCollection;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;

@@ -1,13 +1,11 @@
-package com.borawski.jobtaskone;
+package com.borawski.jobtaskone.transfers;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Document(collection = "transfers")
-public class TransferCollection {
+public class TransferCollectionDTO {
     @Id
     private String id;
     private String senderAccountNumber;
@@ -20,14 +18,12 @@ public class TransferCollection {
     private Double amount;
     private Double total;
     private String currency;
-
     private LocalDateTime createdAt;
 
-    public TransferCollection() {
+    public TransferCollectionDTO() {
     }
 
-
-    public TransferCollection(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
+    public TransferCollectionDTO(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
         this.senderAccountNumber = senderAccountNumber;
         this.transactionDate = transactionDate;
         this.accountingDate = accountingDate;
@@ -39,14 +35,6 @@ public class TransferCollection {
         this.total = total;
         this.currency = currency;
         this.createdAt = createdAt;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getSenderAccountNumber() {
@@ -135,5 +123,23 @@ public class TransferCollection {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        return "TransferEntityDTO{" +
+                "id='" + id + '\'' +
+                ", senderAccountNumber='" + senderAccountNumber + '\'' +
+                ", transactionDate=" + transactionDate +
+                ", accountingDate=" + accountingDate +
+                ", transactionType='" + transactionType + '\'' +
+                ", recieverAccountNumber='" + recieverAccountNumber + '\'' +
+                ", recieverName='" + recieverName + '\'' +
+                ", description='" + description + '\'' +
+                ", amount=" + amount +
+                ", total=" + total +
+                ", currency='" + currency + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
     }
 }

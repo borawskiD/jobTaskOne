@@ -1,4 +1,4 @@
-package com.borawski.jobtaskone;
+package com.borawski.jobtaskone.transfers;
 
 import org.jsoup.nodes.Element;
 
