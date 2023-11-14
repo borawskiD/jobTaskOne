@@ -13,10 +13,12 @@ public class TransferEntity {
     private String senderAccountNumber;
     private LocalDate transactionDate;
     private LocalDate accountingDate;
+    private String transactionType;
     private String recieverAccountNumber;
     private String recieverName;
     private String description;
-    private String amount;
+    private Double amount;
+    private Double total;
     private String currency;
 
     private LocalDateTime createdAt;
@@ -24,16 +26,43 @@ public class TransferEntity {
     public TransferEntity() {
     }
 
-    public TransferEntity(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String recieverAccountNumber, String recieverName, String description, String amount, String currency, LocalDateTime createdAt) {
+
+    public TransferEntity(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
         this.senderAccountNumber = senderAccountNumber;
         this.transactionDate = transactionDate;
         this.accountingDate = accountingDate;
+        this.transactionType = transactionType;
         this.recieverAccountNumber = recieverAccountNumber;
         this.recieverName = recieverName;
         this.description = description;
         this.amount = amount;
+        this.total = total;
         this.currency = currency;
         this.createdAt = createdAt;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    public String getTransactionType() {
+        return transactionType;
+    }
+
+    public void setTransactionType(String transactionType) {
+        this.transactionType = transactionType;
     }
 
     public String getId() {
@@ -90,14 +119,6 @@ public class TransferEntity {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
     }
 
     public String getCurrency() {

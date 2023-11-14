@@ -11,12 +11,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Controller
 public class BankController {
+    TransferRepository transferRepository;
+    public BankController(TransferRepository transferRepository) {
+        this.transferRepository = transferRepository;
+    }
+
 
     @GetMapping("/")
     public String home(){
-        return "index.html";
+            return "index.html";
     }
 
     @PostMapping("/upload")
