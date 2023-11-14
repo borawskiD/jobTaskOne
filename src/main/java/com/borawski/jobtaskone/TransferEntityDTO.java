@@ -1,13 +1,11 @@
 package com.borawski.jobtaskone;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Document(collection = "transfers")
-public class TransferEntity {
+public class TransferEntityDTO {
     @Id
     private String id;
     private String senderAccountNumber;
@@ -20,14 +18,12 @@ public class TransferEntity {
     private Double amount;
     private Double total;
     private String currency;
-
     private LocalDateTime createdAt;
 
-    public TransferEntity() {
+    public TransferEntityDTO() {
     }
 
-
-    public TransferEntity(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
+    public TransferEntityDTO(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
         this.senderAccountNumber = senderAccountNumber;
         this.transactionDate = transactionDate;
         this.accountingDate = accountingDate;
@@ -127,5 +123,23 @@ public class TransferEntity {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        return "TransferEntityDTO{" +
+                "id='" + id + '\'' +
+                ", senderAccountNumber='" + senderAccountNumber + '\'' +
+                ", transactionDate=" + transactionDate +
+                ", accountingDate=" + accountingDate +
+                ", transactionType='" + transactionType + '\'' +
+                ", recieverAccountNumber='" + recieverAccountNumber + '\'' +
+                ", recieverName='" + recieverName + '\'' +
+                ", description='" + description + '\'' +
+                ", amount=" + amount +
+                ", total=" + total +
+                ", currency='" + currency + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
     }
 }
