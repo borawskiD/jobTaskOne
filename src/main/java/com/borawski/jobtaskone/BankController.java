@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 
 @Controller
 public class BankController {
+    /*
     TransferRepository transferRepository;
     public BankController(TransferRepository transferRepository) {
         this.transferRepository = transferRepository;
@@ -37,7 +38,7 @@ public class BankController {
                 LocalDateTime.now()
                 );
             transferRepository.save(exampleTransferEntity);
-        System.out.println(transferRepository.findAll().get(0).getTotal());
+       // System.out.println(transferRepository.findAll().get(0).getTotal());
             return "index.html";
     }
 
@@ -67,5 +68,5 @@ public class BankController {
         //TODO redirect error
         return "Error";
     }
-
+*/
 }
