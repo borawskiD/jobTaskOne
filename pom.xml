@@ -67,6 +67,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>job-app</finalName>
     </build>
 
 </project>
