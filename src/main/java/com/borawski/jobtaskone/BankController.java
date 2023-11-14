@@ -24,7 +24,7 @@ public class BankController {
 
     @GetMapping("/")
     public String home(){
-        TransferEntity exampleTransferEntity = new TransferEntity("PL77 1160 2202 0000 0003 7893 9667",
+        TransferCollection exampleTransferEntity = new TransferCollection("PL77 1160 2202 0000 0003 7893 9667",
                 LocalDate.parse("2021-03-18"),
                 LocalDate.parse("2021-03-18"),
                 "PRZELEW WEWNĘTRZNY PRZYCHODZĄCY",
@@ -52,8 +52,8 @@ public class BankController {
                 for (Element row : rows) {
                     Elements cells = row.select("td, th");
                     Element[] elementsArray = cells.toArray(new Element[0]);
-                    TransferEntityDTO exampleTransferEntity = TransferWrapper.convertElement(elementsArray);
-                    TransferEntity transfer = TransferWrapper.convertToEntity(exampleTransferEntity);
+                    TransferCollectionDTO exampleTransferEntity = TransferWrapper.convertElement(elementsArray);
+                    TransferCollection transfer = TransferWrapper.convertToEntity(exampleTransferEntity);
                     System.out.println(transferRepository.save(transfer));
                 }
                 return rows.text();

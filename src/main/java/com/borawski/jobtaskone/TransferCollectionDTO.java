@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class TransferEntityDTO {
+public class TransferCollectionDTO {
     @Id
     private String id;
     private String senderAccountNumber;
@@ -20,10 +20,10 @@ public class TransferEntityDTO {
     private String currency;
     private LocalDateTime createdAt;
 
-    public TransferEntityDTO() {
+    public TransferCollectionDTO() {
     }
 
-    public TransferEntityDTO(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
+    public TransferCollectionDTO(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
         this.senderAccountNumber = senderAccountNumber;
         this.transactionDate = transactionDate;
         this.accountingDate = accountingDate;

@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Document(collection = "transfers")
-public class TransferEntity {
+public class TransferCollection {
     @Id
     private String id;
     private String senderAccountNumber;
@@ -23,11 +23,11 @@ public class TransferEntity {
 
     private LocalDateTime createdAt;
 
-    public TransferEntity() {
+    public TransferCollection() {
     }
 
 
-    public TransferEntity(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
+    public TransferCollection(String senderAccountNumber, LocalDate transactionDate, LocalDate accountingDate, String transactionType, String recieverAccountNumber, String recieverName, String description, Double amount, Double total, String currency, LocalDateTime createdAt) {
         this.senderAccountNumber = senderAccountNumber;
         this.transactionDate = transactionDate;
         this.accountingDate = accountingDate;
@@ -39,6 +39,14 @@ public class TransferEntity {
         this.total = total;
         this.currency = currency;
         this.createdAt = createdAt;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getSenderAccountNumber() {

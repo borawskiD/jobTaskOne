@@ -6,8 +6,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class TransferWrapper {
-    public static TransferEntityDTO convertElement(Element[] elements) {
-        TransferEntityDTO transferEntityDTO = new TransferEntityDTO();
+    public static TransferCollectionDTO convertElement(Element[] elements) {
+        TransferCollectionDTO transferEntityDTO = new TransferCollectionDTO();
         transferEntityDTO.setSenderAccountNumber(elements[0].text());
         transferEntityDTO.setTransactionDate(LocalDate.parse(elements[1].text()));
         transferEntityDTO.setAccountingDate(LocalDate.parse(elements[2].text()));
@@ -23,8 +23,8 @@ public class TransferWrapper {
         return transferEntityDTO;
     }
 
-    public static TransferEntity convertToEntity(TransferEntityDTO transferEntityDTO) {
-        TransferEntity transferEntity = new TransferEntity();
+    public static TransferCollection convertToEntity(TransferCollectionDTO transferEntityDTO) {
+        TransferCollection transferEntity = new TransferCollection();
         transferEntity.setSenderAccountNumber(transferEntityDTO.getSenderAccountNumber());
         transferEntity.setTransactionDate(transferEntityDTO.getTransactionDate());
         transferEntity.setAccountingDate(transferEntityDTO.getAccountingDate());
