@@ -22,7 +22,7 @@ Aplikacja tego typu ma dość spory problem, zaznaczony zresztą w poleceniu - d
 
 ## Czego się nauczyłem?
 
-Sporo by wymieniać :) Jestem raczej ambitnym człowiekiem, dlatego nie poddałem się po zobaczeniu polecenia. Zaczynając pisać aplikację podszedłem do tego z podejściem "op ogółu do szczegółu" - najpierw napisałem kolejkcję, parser, podpiąłem bazę danych i napisałem REST API w klasyczny sposób (co w historii commitów zapewne jest). Potem już przepisałęm API na WebFlux - jak wyszło, zapewne ocenić potrafi ktoś bardziej kompetentny - starałem się uzyskać efekt stosując się do zasady KISS i wszelkie wątpliwości googlując. Jestem przekonany, że da się to zrobić lepiej i dużo nauki przede mną, i to chyba najważniejsze - cały czas pracować.
+Sporo by wymieniać :) Jestem raczej ambitnym człowiekiem, dlatego nie poddałem się po zobaczeniu polecenia. Zaczynając pisać aplikację podszedłem do tego z podejściem "od ogółu do szczegółu" - najpierw napisałem kolejkę, parser, podpiąłem bazę danych i napisałem REST API w klasyczny sposób (co w historii commitów zapewne jest). Potem już przepisałęm API na WebFlux - jak wyszło, zapewne ocenić potrafi ktoś bardziej kompetentny - starałem się uzyskać efekt stosując się do zasady KISS i wszelkie wątpliwości googlując. Jestem przekonany, że da się to zrobić lepiej i dużo nauki przede mną, i to chyba najważniejsze - cały czas pracować.
 
 ## Dlaczego chciałbym dostać tę pracę?
 
