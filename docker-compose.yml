@@ -2,9 +2,9 @@ version: "3.8"
 services:
   job-app:
     build: .
-    container_name: "docker-app"
+    container_name: "job-app"
     ports:
-      - 4950:4950
+      - 8080:8080
   mongodb:
     image: mongo:latest
     container_name: "mongodb"
