@@ -20,6 +20,9 @@ public class TransferWrapper {
         transferEntityDTO.setTotal(Double.parseDouble(elements[9].text()));
         transferEntityDTO.setCurrency(elements[10].text());
         transferEntityDTO.setCreatedAt(LocalDateTime.now());
+
+        System.out.println("\n po zamianie na DTO: ");
+        System.out.println(transferEntityDTO);
         return transferEntityDTO;
     }
 
@@ -29,12 +32,17 @@ public class TransferWrapper {
         transferEntity.setTransactionDate(transferEntityDTO.getTransactionDate());
         transferEntity.setAccountingDate(transferEntityDTO.getAccountingDate());
         transferEntity.setRecieverAccountNumber(transferEntityDTO.getRecieverAccountNumber());
+        transferEntity.setTransactionType(transferEntityDTO.getTransactionType());
         transferEntity.setRecieverName(transferEntityDTO.getRecieverName());
         transferEntity.setDescription(transferEntityDTO.getDescription());
         transferEntity.setAmount(transferEntityDTO.getAmount());
         transferEntity.setTotal(transferEntityDTO.getTotal());
         transferEntity.setCurrency(transferEntityDTO.getCurrency());
         transferEntity.setCreatedAt(transferEntityDTO.getCreatedAt());
+
+        System.out.println("\n po zamianie na entity: ");
+        System.out.println(transferEntity);
+
         return transferEntity;
     }
 }
