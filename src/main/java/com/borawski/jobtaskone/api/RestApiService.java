@@ -25,10 +25,6 @@ public class RestApiService {
     public TransferCollection convertRowToTransfer(Element row) {
         Elements cells = row.select("td, th");
         Element[] elementsArray = cells.toArray(new Element[0]);
-        for (int i = 0; i < elementsArray.length; i++) {
-            System.out.println(i + ": " + elementsArray[i]);
-        }
-        System.out.println("\n");
         TransferCollectionDTO exampleTransferEntity = TransferWrapper.convertElement(elementsArray);
         return TransferWrapper.convertToEntity(exampleTransferEntity);
     }
