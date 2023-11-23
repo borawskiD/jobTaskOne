@@ -32,7 +32,7 @@ public class TransferWrapper {
         Pattern pattern = Pattern.compile(regexPattern);
         Matcher matcher = pattern.matcher(input);
         StringBuilder result = new StringBuilder();
-        result.append("PL");
+        if (input.length() > 0) result.append("PL");
         while (matcher.find()) {
             result.append(matcher.group());
         }
