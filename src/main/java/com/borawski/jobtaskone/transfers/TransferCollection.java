@@ -136,4 +136,22 @@ public class TransferCollection {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
+
+    @Override
+    public String toString() {
+        return "TransferCollection{" +
+                "id='" + id + '\'' +
+                ", senderAccountNumber='" + senderAccountNumber + '\'' +
+                ", transactionDate=" + transactionDate +
+                ", accountingDate=" + accountingDate +
+                ", transactionType='" + transactionType + '\'' +
+                ", recieverAccountNumber='" + recieverAccountNumber + '\'' +
+                ", recieverName='" + recieverName + '\'' +
+                ", description='" + description + '\'' +
+                ", amount=" + amount +
+                ", total=" + total +
+                ", currency='" + currency + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
+    }
 }
