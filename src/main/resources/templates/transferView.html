@@ -16,7 +16,7 @@
     <div class="col-12">
         <div class="table-responsive">
             <table class="table table-striped table-hover align-middle">
-                <thead class="thead-dark">
+                <thead>
                 <tr>
                     <th scope="col">Numer rachunku/karty</th>
                     <th scope="col">Data transakcji</th>
@@ -42,8 +42,8 @@
                     <td th:text="${transfer.recieverAccountNumber}" />
                     <td th:text="${transfer.recieverName}" />
                     <td th:text="${transfer.description}" />
-                    <td th:text="${transfer.amount}" />
-                    <td th:text="${transfer.amount}" />
+                    <td th:text="${transfer.amount < 0 ? transfer.amount : ''}" />
+                    <td th:text="${transfer.amount > 0 ? transfer.amount : ''}" />
                     <td th:text="${transfer.total}" />
                     <td th:text="${transfer.currency}" />
                     <td th:text="${transfer.createdAt}" />
