@@ -8,6 +8,24 @@ Dziękuję za szansę i możliwość zrobienia zadania, w tym repozytorium znajd
 
 Zgodnie z poleceniem, w repozytorium znajduje się plik docker-compose.
 Dodałem również plik dokera na dockerhub: dborawski02/first-job-task
+
+Zadanie drugie:
+dockerhub: dborawski02/third-task
+Kod i docker-compose w repozytorium.
+
+## Zadanie 3
+
+W ramach zadania stworzyłem dwie proste strony z użyciem Bootstrapa. 
+* index.html to po prostu formularz do obsługi pliku .html będącego nośnikiem przelewów. Po kliknięciu przycisku następuje wysłanie danych do /upload.
+* transferView.html to tabela w bootstrapie wyświetlająca bieżącą zawartość bazy danych z obsługą paginacji, do integracji ze Springiem użyłem Thymeleaf.
+* Dodałem oddzielny kontroler do obsługi w/w.
+* Dodałem parsowanie inputu numeru konta odbiorcy zgodnie z feedbackiem.
+### Formularz dodania informacji do bazy danych:
+![formularz](https://i.imgur.com/59CEBQ0.png)
+### Przegląd przelewów
+![przelewy](https://i.imgur.com/lLFbwUd.png)
+
+
 ## Jak to jest zrobione?
 W ramach zadania stworzyłem kolekcję "transfers", której pola pokrywają się z danymi umieszczonymi w przykładowymi pliku. Dodatkowo dodałem pole ID, oraz nieco inaczej podszedłem do samej kwoty - nie wyróżniam tutaj obciążenia od uznania, ponieważ prościej jest po prostu przechowywać kwotę (znak sam powie o odpowiednim umieszczeniu w przypadku eksportu).
 TransferCollectionDTO to niemal bliźniacza klasa do TransferCollection, jednakże uznałem, że zastosowanie wzorca DTO nawet pomimo stosunkowo niewielkiej złożoności projektu poprawi jakość kodu. Kiedy uczyłem się Springa usłyszałem określenie "Encja na twarz i pchasz" - staram się robić inaczej :).
