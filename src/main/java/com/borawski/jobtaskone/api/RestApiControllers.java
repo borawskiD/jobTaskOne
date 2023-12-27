@@ -40,13 +40,6 @@ public class RestApiControllers {
     public static class TransferNotFoundException extends RuntimeException {
     }
 
-
-    @EventListener(ApplicationReadyEvent.class)
-    public void insertStartData(){
-        transferRepository.deleteAll().subscribe();
-    }
-
-
     @PostMapping("/transfers")
     public Flux<TransferCollection> uploadNewTransfers(@RequestPart("file") FilePart filePart) {
         return filePart.content()

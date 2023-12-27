@@ -3,7 +3,9 @@ COPY src /usr/src/app/src
 COPY pom.xml /usr/src/app
 RUN mvn -f /usr/src/app/pom.xml clean package
 
+FROM mongo
+
 FROM openjdk:17
-COPY --from=build /usr/src/app/target/job-app.jar /usr/app/job-app.jar
+COPY --from=build /usr/src/app/target/job-app.jar /usr/app/job-front.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/usr/app/job-app.jar"]
+ENTRYPOINT ["java","-jar","/usr/app/job-front.jar"]
